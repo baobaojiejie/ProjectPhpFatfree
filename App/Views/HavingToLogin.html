@@ -1,0 +1,222 @@
+<!-- header part of all pages  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.84.0" />
+    <title>Bonjour Bye</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.0/examples/album/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link href="Style/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- yousef: favicon -->
+    <link rel="shortcut icon" type="image/svg" href="Style/favicon.svg" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">
+                This is a course project designed and developed by ZATY Group
+                for PHP course, IPD-25, John Abbott College, Summer 2021. <br/> ZATY Group: Zhao,
+                Adriano, Tasha, Yousef
+              </p>
+            </div>
+
+            <!-- Navigation bar part  -->
+            <div class="col-sm-4 offset-md-1 py-4">
+              <ul class="list-unstyled">
+                <a
+                  class="nav-link text-white"
+                  href="homepage/"
+                  id="dropdown08"
+                  aria-expanded="false"
+                  >Home page</a
+                >
+
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-white"
+                    href="items/"
+                    id="dropdown08"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >Select Language</a
+                  >
+                  <ul class="dropdown-menu" aria-labelledby="dropdown08">
+                    <li><a class="dropdown-item" href="items/">English</a></li>
+                    <li>
+                      <a class="dropdown-item" href="addItem/">French</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="myItems/">Chinese</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="myItems/">Persian</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="myItems/">Spanish</a>
+                    </li>
+                  </ul>
+                </li>
+
+
+                <!-- User Items -->
+                <!-- f3 check for logged in user -->
+                <!-- <check if="{{ @gender=='M' }}"> -->
+
+                <check if="{{ $_COOKIE['cookie_username'] != null }}">
+                <true>
+
+
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-white"
+                    href="items/"
+                    id="dropdown08"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >User Area</a
+                  >
+                  <ul class="dropdown-menu" aria-labelledby="dropdown08">
+                    <li>
+                      <a class="dropdown-item" href="items/">Browse Items</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="addItem/">Add Item</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="myItems/">Delete Item</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="signout/">Sign out</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- BIDS -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-white"
+                    href="#"
+                    id="dropdown08"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >Bids</a
+                  >
+                  <ul class="dropdown-menu" aria-labelledby="dropdown08">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                </true>
+              </check>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <strong>Bonjour Bye Auction</strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+
+
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        
+        <!-- f3 generate user name -->
+        <h1 class="fw-light">Sorry! You signed out from user account. Sign in again please</h1>
+        <p class="lead text-muted">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam vero
+          quis eius distinctio voluptates. Eligendi vero corporis dignissimos
+          harum quae nihil! Nesciunt provident voluptatem tempore nemo quas ea
+          eaque ducimus.
+        </p>
+
+
+        <hr>
+        <!-- <a class="w-50 btn btn-lg btn-primary" href="items/{{ @userData.username }}" role="button">Items</a>  -->
+        <a class="w-50 btn btn-lg btn-primary" href="homepage/" role="button">Goto Homepage and Sign in</a> <br/><br/>
+        
+      </div>
+  </section>
+
+ 
+</main>
+
+
+
+<!-- footer part for all the pages  -->
+<hr>
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a><br/>
+      <a class="link-success" href="homepage/">Home page</a>
+    </p>
+    <p class="mb-1">Auction Community</p>
+    <p class="mb-0">Designed and Developed by: ZATY Group (Zhao, Adrian Paz Alonso, Tasha Jones, Yousef Emadi)</a>.</p>
+  </div>
+</footer>
+
+
+    <script src="Script/bootstrap.bundle.min.js"></script>
+  
+
+      
+  </body>
+</html>
